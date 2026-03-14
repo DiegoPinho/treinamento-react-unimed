@@ -1,0 +1,48 @@
+:root {
+  --color-primary: #00995d;
+  --color-primary-dark: #007a4a;
+  --color-primary-light: #e8f5e9;
+  --color-white: #ffffff;
+  --color-bg: #f5f7fa;
+  --color-text: #1a1a2e;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+  --color-error: #dc2626;
+  --color-error-light: #fef2f2;
+  --color-success: #16a34a;
+  --color-success-light: #f0fdf4;
+  --color-blue: #2563eb;
+  --color-blue-light: #eff6ff;
+  --color-orange: #ea580c;
+  --color-orange-light: #fff7ed;
+  --color-red: #dc2626;
+  --color-red-light: #fef2f2;
+  --color-green: #16a34a;
+  --color-green-light: #f0fdf4;
+  --color-gray: #6b7280;
+  --color-gray-light: #f3f4f6;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --radius: 8px;
+  --radius-lg: 12px;
+  --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}

@@ -1,0 +1,220 @@
+{
+  "pacientes": [
+    {
+      "id": 1,
+      "nome": "Maria Silva Santos",
+      "cpf": "123.456.789-00",
+      "email": "maria.silva@email.com",
+      "telefone": "(19) 99887-6543",
+      "plano": "Unimed Flex 200",
+      "carteirinha": "0089234000012",
+      "senha": "123456"
+    }
+  ],
+  "consultas": [
+    {
+      "id": 1,
+      "pacienteId": 1,
+      "data": "2026-03-20T10:00:00",
+      "especialidade": "Cardiologia",
+      "medico": "Dr. Ricardo Mendes",
+      "status": "agendada",
+      "local": "Unimed Centro Clínico - Sala 305"
+    },
+    {
+      "id": 2,
+      "pacienteId": 1,
+      "data": "2026-03-10T14:30:00",
+      "especialidade": "Dermatologia",
+      "medico": "Dra. Fernanda Lima",
+      "status": "realizada",
+      "local": "Unimed Centro Clínico - Sala 201"
+    },
+    {
+      "id": 3,
+      "pacienteId": 1,
+      "data": "2026-02-15T09:00:00",
+      "especialidade": "Ortopedia",
+      "medico": "Dr. Carlos Andrade",
+      "status": "realizada",
+      "local": "Hospital Unimed - Bloco B"
+    },
+    {
+      "id": 4,
+      "pacienteId": 1,
+      "data": "2026-02-28T11:00:00",
+      "especialidade": "Oftalmologia",
+      "medico": "Dra. Ana Beatriz Costa",
+      "status": "cancelada",
+      "local": "Unimed Centro Clínico - Sala 102"
+    },
+    {
+      "id": 5,
+      "pacienteId": 1,
+      "data": "2026-04-05T08:30:00",
+      "especialidade": "Clínica Geral",
+      "medico": "Dr. Paulo Henrique Souza",
+      "status": "agendada",
+      "local": "Unimed Centro Clínico - Sala 410"
+    },
+    {
+      "id": 6,
+      "pacienteId": 1,
+      "data": "2026-01-20T16:00:00",
+      "especialidade": "Neurologia",
+      "medico": "Dra. Mariana Oliveira",
+      "status": "realizada",
+      "local": "Hospital Unimed - Bloco A"
+    }
+  ],
+  "exames": [
+    {
+      "id": 1,
+      "pacienteId": 1,
+      "tipo": "Hemograma Completo",
+      "data": "2026-03-08",
+      "status": "resultado_disponivel",
+      "resultado": "/resultados/hemograma-2026-03.pdf"
+    },
+    {
+      "id": 2,
+      "pacienteId": 1,
+      "tipo": "Glicemia de Jejum",
+      "data": "2026-03-08",
+      "status": "resultado_disponivel",
+      "resultado": "/resultados/glicemia-2026-03.pdf"
+    },
+    {
+      "id": 3,
+      "pacienteId": 1,
+      "tipo": "Raio-X Tórax",
+      "data": "2026-03-15",
+      "status": "aguardando_resultado",
+      "resultado": null
+    },
+    {
+      "id": 4,
+      "pacienteId": 1,
+      "tipo": "Eletrocardiograma",
+      "data": "2026-03-18",
+      "status": "agendado",
+      "resultado": null
+    },
+    {
+      "id": 5,
+      "pacienteId": 1,
+      "tipo": "Ultrassom Abdominal",
+      "data": "2026-02-20",
+      "status": "resultado_disponivel",
+      "resultado": "/resultados/usg-abd-2026-02.pdf"
+    },
+    {
+      "id": 6,
+      "pacienteId": 1,
+      "tipo": "Colesterol Total e Frações",
+      "data": "2026-03-08",
+      "status": "resultado_disponivel",
+      "resultado": "/resultados/colesterol-2026-03.pdf"
+    },
+    {
+      "id": 7,
+      "pacienteId": 1,
+      "tipo": "TSH e T4 Livre",
+      "data": "2026-01-15",
+      "status": "resultado_disponivel",
+      "resultado": "/resultados/tireoide-2026-01.pdf"
+    },
+    {
+      "id": 8,
+      "pacienteId": 1,
+      "tipo": "Ressonância Magnética Joelho",
+      "data": "2026-04-02",
+      "status": "agendado",
+      "resultado": null
+    }
+  ],
+  "notificacoes": [
+    {
+      "id": 1,
+      "pacienteId": 1,
+      "titulo": "Consulta confirmada",
+      "mensagem": "Sua consulta com Dr. Ricardo Mendes em Cardiologia foi confirmada para 20/03/2026 às 10:00.",
+      "lida": true,
+      "data": "2026-03-13T09:00:00"
+    },
+    {
+      "id": 2,
+      "pacienteId": 1,
+      "titulo": "Resultado disponível",
+      "mensagem": "O resultado do seu Hemograma Completo realizado em 08/03/2026 já está disponível.",
+      "lida": true,
+      "data": "2026-03-12T14:30:00"
+    },
+    {
+      "id": 3,
+      "pacienteId": 1,
+      "titulo": "Lembrete de exame",
+      "mensagem": "Você tem um Raio-X Tórax agendado para amanhã, 15/03/2026. Lembre-se de trazer o pedido médico.",
+      "lida": true,
+      "data": "2026-03-14T08:00:00"
+    },
+    {
+      "id": 4,
+      "pacienteId": 1,
+      "titulo": "Consulta cancelada",
+      "mensagem": "Sua consulta com Dra. Ana Beatriz Costa em Oftalmologia do dia 28/02/2026 foi cancelada.",
+      "lida": true,
+      "data": "2026-02-27T10:00:00"
+    },
+    {
+      "id": 5,
+      "pacienteId": 1,
+      "titulo": "Bem-vindo ao Portal",
+      "mensagem": "Bem-vinda, Maria! Aqui você pode consultar suas consultas, exames e muito mais.",
+      "lida": true,
+      "data": "2026-01-10T08:00:00"
+    }
+  ],
+  "especialidades": [
+    {
+      "id": 1,
+      "nome": "Cardiologia"
+    },
+    {
+      "id": 2,
+      "nome": "Dermatologia"
+    },
+    {
+      "id": 3,
+      "nome": "Ortopedia"
+    },
+    {
+      "id": 4,
+      "nome": "Oftalmologia"
+    },
+    {
+      "id": 5,
+      "nome": "Clínica Geral"
+    },
+    {
+      "id": 6,
+      "nome": "Neurologia"
+    },
+    {
+      "id": 7,
+      "nome": "Ginecologia"
+    },
+    {
+      "id": 8,
+      "nome": "Urologia"
+    },
+    {
+      "id": 9,
+      "nome": "Pediatria"
+    },
+    {
+      "id": 10,
+      "nome": "Endocrinologia"
+    }
+  ]
+}
