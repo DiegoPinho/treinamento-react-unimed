@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal do Paciente - Unimed</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ==========================================
+         TELA DE LOGIN
+         ========================================== -->
+  <main class="login-page" id="login-page">
+    <div class="login-card">
+      <header class="login-header">
+        <span class="login-header__icon">🏥</span>
+        <h1>Portal do Paciente</h1>
+        <p>Unimed</p>
+      </header>
+
+      <form class="login-form" id="login-form">
+        <div class="form-group">
+          <label for="carteirinha">Carteirinha</label>
+          <input type="text" id="carteirinha" placeholder="Digite sua carteirinha" />
+          <span class="error-message" id="carteirinha-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="Digite sua senha" />
+          <span class="error-message" id="senha-error"></span>
+        </div>
+
+        <div class="error-message" id="login-error"></div>
+
+        <button type="submit" class="btn-primary" id="btn-login">
+          Entrar
+        </button>
+      </form>
+
+      <p class="login-hint">
+        Carteirinha: <strong>0089234000012</strong> | Senha:
+        <strong>123456</strong>
+      </p>
+    </div>
+  </main>
+
+  <!-- ==========================================
+         TELA DE CONSULTAS
+         ========================================== -->
+  <div class="app-container" id="app-container" style="display: none">
+    <header class="header">
+      <div class="header__logo">
+        <span>🏥</span>
+        <h1>Portal do Paciente</h1>
+      </div>
+      <div class="header__user">
+        <span id="user-name"></span>
+        <button class="btn-logout" id="btn-logout">Sair</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h2>Minhas Consultas</h2>
+        <p id="consultas-count"></p>
+      </div>
+
+      <!-- FILTRO POR STATUS -->
+      <div class="filtro-status" id="filtro-status">
+        <button class="filtro-btn filtro-btn--active" data-status="todas">
+          Todas
+        </button>
+        <button class="filtro-btn" data-status="agendada">Agendadas</button>
+        <button class="filtro-btn" data-status="realizada">Realizadas</button>
+        <button class="filtro-btn" data-status="cancelada">Canceladas</button>
+      </div>
+
+      <!-- LOADING INDICATOR -->
+      <div class="loading" id="loading" style="display: none">
+        <div class="loading__spinner"></div>
+        <p>Carregando consultas...</p>
+      </div>
+
+      <!-- MENSAGEM DE ERRO -->
+      <div class="error-banner" id="error-banner" style="display: none">
+        <p id="error-banner-text"></p>
+        <button class="btn-retry" id="btn-retry">Tentar novamente</button>
+      </div>
+
+      <!-- ESTADO VAZIO -->
+      <div class="empty-state" id="empty-state" style="display: none">
+        <span class="empty-state__icon">📋</span>
+        <p>Nenhuma consulta encontrada para este filtro.</p>
+      </div>
+
+      <!-- LISTA DE CONSULTAS -->
+      <div class="consultas-list" id="consultas-list"></div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
