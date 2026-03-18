@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal do Paciente - Unimed</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="login-page" id="login-page">
+    <div class="login-card">
+      <header class="login-header">
+        <span class="login-header__icon">🏥</span>
+        <h1>Portal do Paciente</h1>
+        <p>Unimed</p>
+      </header>
+
+      <form class="login-form" id="login-form">
+        <div class="form-group">
+          <label for="carteirinha">Carteirinha</label>
+          <input type="text" id="carteirinha" placeholder="Digite sua carteirinha" />
+          <span class="error-message" id="carteirinha-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="Digite sua senha" />
+          <span class="error-message" id="senha-error"></span>
+        </div>
+
+        <div class="error-message" id="login-error"></div>
+
+        <button type="submit" class="btn-primary">Entrar</button>
+      </form>
+
+      <p class="login-hint">
+        Carteirinha: <strong>0089234000012</strong> | Senha:
+        <strong>123456</strong>
+      </p>
+    </div>
+  </main>
+
+  <div class="app-container" id="app-container" style="display: none">
+    <header class="header">
+      <div class="header__logo">
+        <span>🏥</span>
+        <h1>Portal do Paciente</h1>
+      </div>
+      <div class="header__user">
+        <span id="user-name"></span>
+        <button class="btn-logout" id="btn-logout">Sair</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="page-header">
+        <h2>Minhas Consultas</h2>
+        <p id="consultas-count"></p>
+      </div>
+
+      <div class="consultas-list" id="consultas-list">
+        <!-- Cards serão inseridos via JavaScript -->
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

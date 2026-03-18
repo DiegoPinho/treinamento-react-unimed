@@ -1,0 +1,299 @@
+/* =============================================
+   RESET E BASE
+   ============================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #1a1a2e;
+  background: #f5f7fa;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =============================================
+   LOGIN PAGE
+   ============================================= */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #00995d 0%, #007a4a 100%);
+  padding: 24px;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-header__icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.login-header h1 {
+  font-size: 1.5rem;
+  color: #00995d;
+  margin-bottom: 4px;
+}
+
+.login-header p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #00995d;
+  box-shadow: 0 0 0 3px rgba(0, 153, 93, 0.1);
+}
+
+.form-group input.input-error {
+  border-color: #dc2626;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background: #00995d;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #007a4a;
+}
+
+.login-hint {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+  padding: 12px;
+  background: #f5f7fa;
+  border-radius: 8px;
+}
+
+/* =============================================
+   MENSAGENS DE ERRO
+   ============================================= */
+
+.error-message {
+  font-size: 0.8rem;
+  color: #dc2626;
+  min-height: 1.2em;
+}
+
+/* =============================================
+   HEADER
+   ============================================= */
+
+.header {
+  background: #00995d;
+  color: #ffffff;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__logo h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.header__user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.9rem;
+}
+
+.btn-logout {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+
+.btn-logout:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* =============================================
+   MAIN CONTENT
+   ============================================= */
+
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* =============================================
+   CONSULTA CARDS
+   ============================================= */
+
+.consultas-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.consulta-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  transition: box-shadow 0.2s;
+}
+
+.consulta-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.consulta-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.consulta-card__especialidade {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.consulta-card__medico {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.consulta-card__details {
+  display: flex;
+  gap: 20px;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* =============================================
+   STATUS BADGES
+   ============================================= */
+
+.status-badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-badge--agendada {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.status-badge--realizada {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.status-badge--cancelada {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+/* =============================================
+   RESPONSIVIDADE
+   ============================================= */
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 24px;
+  }
+
+  .consulta-card__details {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
