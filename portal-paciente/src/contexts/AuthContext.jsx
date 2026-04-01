@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useCallback } from 'react'
-import { get } from '../services/api'
+import { post } from '../services/api'
 
 const AuthContext = createContext(null)
 
@@ -7,21 +7,21 @@ export function AuthProvider({ children }) {
   const [paciente, setPaciente] = useState(null)
 
   const login = useCallback(async (carteirinha, senha) => {
-    const pacientes = await get(`/pacientes?carteirinha=${encodeURIComponent(carteirinha)}`)
+    const paciente = await post(`/login`, { carteirinha, senha })
 
-    if (pacientes.length === 0) {
+    if (!paciente) {
       throw new Error('Carteirinha não encontrada')
     }
 
-    const pacienteEncontrado = pacientes[0]
+    // const pacienteEncontrado = pacientes[0]
 
-    if (pacienteEncontrado.senha !== senha) {
-      throw new Error('Senha incorreta')
-    }
+    // if (pacienteEncontrado.senha !== senha) {
+    //   throw new Error('Senha incorreta')
+    // }
 
-    // Remove senha antes de armazenar
-    const { senha: _, ...dadosPaciente } = pacienteEncontrado
-    setPaciente(dadosPaciente)
+    // // Remove senha antes de armazenar
+    // const { senha: _, ...dadosPaciente } = pacienteEncontrado
+    setPaciente(paciente)
   }, [])
 
   const logout = useCallback(() => {

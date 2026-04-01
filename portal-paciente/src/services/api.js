@@ -1,27 +1,20 @@
-const API_URL = 'http://localhost:3001'
+import axios from 'axios'
+
+const api = axios.create({
+  baseURL: import.meta.env.VITE_API_URL,
+})
 
 export async function get(endpoint) {
-  const response = await fetch(`${API_URL}${endpoint}`)
-  if (!response.ok) throw new Error(`Erro ao buscar dados: ${response.status}`)
-  return response.json()
+  const response = await api.get(endpoint)
+  return response.data
 }
 
 export async function post(endpoint, data) {
-  const response = await fetch(`${API_URL}${endpoint}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  })
-  if (!response.ok) throw new Error(`Erro ao enviar dados: ${response.status}`)
-  return response.json()
+  const response = await api.post(endpoint, data)
+  return response.data
 }
 
 export async function patch(endpoint, data) {
-  const response = await fetch(`${API_URL}${endpoint}`, {
-    method: 'PATCH',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  })
-  if (!response.ok) throw new Error(`Erro ao atualizar dados: ${response.status}`)
-  return response.json()
+  const response = await api.patch(endpoint, data)
+  return response.data
 }
